@@ -22,6 +22,7 @@ import { ru } from './ru.mjs';
 import { tr } from './tr.mjs';
 import { vi } from './vi.mjs';
 import { zhCn } from './zh_cn.mjs';
+import { zhTw } from './zh_tw.mjs';
 
 const locales = {
   ca: ca,
@@ -43,6 +44,7 @@ const locales = {
   // for chinese, allow cn, zh and zh_cn
   zh: zhCn,
   zh_cn: zhCn,
+  zh_tw: zhTw,
 };
 
 // e.g. en fr pl
