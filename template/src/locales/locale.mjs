@@ -48,10 +48,11 @@ const locales = {
 };
 
 // e.g. en fr pl
-export const lang = (window.navigator.language ?? 'en-GB').toLowerCase().substr(0, 2);
 export const langFull = (window.navigator.language ?? 'en-GB').toLowerCase();
+export const langFullP = langFull.replace(/-/g, '_');
+export const lang = langFull.substr(0, 2);
 
-export let locale = locales[langFull] ? locales[langFull] : (locales[lang] ? locales[lang] : locales.en);
+export let locale = locales[langFull] ? locales[langFull] : (locales[langFullP] ? locales[langFullP] : (locales[lang] ? locales[lang] : locales.en));
 
 export function __ (text) {
   const index = locale[text];
